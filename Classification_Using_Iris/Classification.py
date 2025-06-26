@@ -92,3 +92,18 @@ for k in k_range:
     
     scrores_train.append(metrics.accuracy_score(y_train, y_pred_train))
     scrores_test.append(metrics.accuracy_score(y_test, y_pred_test))
+ 
+
+# ------------------ PLOT TRAIN AND TEST SCORES ------------------
+
+df_plot = pd.DataFrame({'score_train': scrores_train, 'score_test': scrores_test})
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred_test))
+print("Confusion Matrix:\n", confusion_matrix(y_train, y_pred_train))
+df_plot.plot(figsize=(12, 6))
+plt.title('Train and Test Scores for KNN Classifier')
+plt.xlabel('K Value')
+plt.ylabel('Accuracy Score')
+plt.xticks(k_range)
+plt.grid()
+plt.savefig(r"C:\MACHINE_LEARNING_MINI_PROJECTS\Classification_Using_Iris\knn_scores_plot.png")
+plt.show()
