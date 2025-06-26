@@ -107,3 +107,11 @@ plt.xticks(k_range)
 plt.grid()
 plt.savefig(r"C:\MACHINE_LEARNING_MINI_PROJECTS\Classification_Using_Iris\knn_scores_plot.png")
 plt.show()
+
+
+# ------------------ BOOSTING AND BAGGING TECHNIQUES ------------------
+from xgboost import XGBClassifier
+xgb = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss')
+xgb.fit(x_train, y_train)
+y_pred_xgb = xgb.predict(x_test)
+print("XGBoost Accuracy:", metrics.accuracy_score(y_test, y_pred_xgb))  
