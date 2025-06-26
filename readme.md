@@ -5,6 +5,7 @@ This repository contains a collection of mini projects for learning and practici
 ## Project List
 
 - [California Housing Price Prediction](California_Housing_Price/readme.md): Predicts housing prices in California using regression models.
+- [Iris Dataset Classification](Classification_Using_Iris/readme.md): Demonstrates classification techniques and visualization using the classic Iris dataset.
 
 <!-- Add more projects below as you create them -->
 <!-- - [Project Name](Project_Folder/readme.md): Short description. -->
